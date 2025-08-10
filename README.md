@@ -1,4 +1,4 @@
-| Cohort        | Genome build (per original study/kit) |
+| Cohort        | Genome build used (based on original study/kit) |
 |---------------|---------------------------------------|
 | Abud_Lab      | hg38                                  |
 | Blandino_Lab  | hg19                                  |
