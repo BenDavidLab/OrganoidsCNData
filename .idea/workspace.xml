@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="49bc54e9-4bb4-4f0e-92ff-906df1397f27" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/OrganoidsCNData.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Abud_Lab/M_vals_Engel_etal_2022.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Abud_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Abud_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Abud_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Abud_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Abud_Lab/seg_from_genes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Abud_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 1/Blandino_Samples.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 1/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 1/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 1/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 1/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 1/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 1/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 2/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 2/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 2/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 2/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 2/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 2/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blandino_Lab/Blandino lab 2/segments_of_all_samples.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/De_Julio_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/De_Julio_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/De_Julio_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/De_Julio_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/De_Julio_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/De_Julio_Lab/samples_copy_number_segments.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/De_Julio_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#11_2D_DNA_dnacopy.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#11_Tumor.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#11_org_E_dnacopy.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#11_org_L_dnacopy.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#18_2D_DNA_dnacopy.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#18_Tumor.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#18_org_DNA_dnacopy.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#8_2D_DNA_dnacopy.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#8_Tumor.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/#8_org_DNA_dnacopy.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Furukawa_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL003 PDX p3_RS-03139920_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL003 SS_RS-03139910_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL003 XPDO p3_RS-03139921_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL003 XPDS p3_RS-03139922_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL005 PDX p2_RS-03365647_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL005 XPDO p3_RS-03365648_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL005 XPDS p4_RS-03365655_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL019 PDX p2_RS-03139907_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL019 SS_RS-03139909_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL019 XPDO p3_RS-03139911_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL019 XPDS p3_RS-03139919_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL022 PDX p2_RS-03139912_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL022 SS_RS-03139908_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL022 XPDO p3_RS-03139916_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL022 XPDS p2_RS-03139915_2.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL040 PDX p2_RS-03365645_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL040 SS_RS-03365644_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL050 PDX p2_RS-03365641_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL050 SS_RS-03365640_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL051 PDX p2_RS-03365638_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL051 SS_RS-03365637_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL054 PDX p2_RS-03365650_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL054 SS_RS-03365649_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL054 XPDO p2_RS-03365651_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/per_sample/RP-BL054 XPDS p2_RS-03365652_1.counts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/rsem.gene.estimated.counts_combined.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL003 PDX p3_RS-03139920_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL003 SS_RS-03139910_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL003 XPDO p3_RS-03139921_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL003 XPDS p3_RS-03139922_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL005 PDX p2_RS-03365647_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL005 XPDO p3_RS-03365648_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL005 XPDS p4_RS-03365655_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL019 PDX p2_RS-03139907_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL019 SS_RS-03139909_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL019 XPDO p3_RS-03139911_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL019 XPDS p3_RS-03139919_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL022 PDX p2_RS-03139912_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL022 SS_RS-03139908_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL022 XPDO p3_RS-03139916_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL022 XPDS p2_RS-03139915_2.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL040 PDX p2_RS-03365645_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL040 SS_RS-03365644_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL050 PDX p2_RS-03365641_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL050 SS_RS-03365640_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL051 PDX p2_RS-03365638_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL051 SS_RS-03365637_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL054 PDX p2_RS-03365650_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL054 SS_RS-03365649_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL054 XPDO p2_RS-03365651_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/seg_files/RP-BL054 XPDS p2_RS-03365652_1.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/segments_of_all_samples.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Huss_Lab/split_round_matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/Links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/prad_mskcc_cheny1_organoids_2014_segments.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/prad_organoids_msk_2022_segments.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Khurana_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/cell_stem_cell_2020_leung.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/gut_2018_leung_seg.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leung_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rubin_Lab/21598290cd161154-sup-173021_2_supp_3840408_bkg7bp.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rubin_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rubin_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rubin_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rubin_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rubin_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rubin_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shen_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shen_Lab/bladder_columbia_msk_2018_segments.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shen_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shen_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shen_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shen_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shen_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/Data_Info_Table.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_001_EU_EX_0298.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_001_NN_EX_0291.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_001_OU_EX_006E.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_002_NN_EX_0345.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_002_OU_EX_0342.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_002_OU_EX_0357.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_003_EU_EX_00S4.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_003_NN_EX_00S3.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_003_OU_EX_00S5.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_004_EU_EX_4320.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_004_NN_EX_4337.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_004_OU_EX_5328.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_005_EU_EX_5362.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_005_NN_EX_5337.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_005_OU_EX_5318.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_006_EU_EX_0345.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_006_NN_EX_0376.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_006_OU_EX_0389.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_007_EU_EX_0316.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_007_NN_EX_0365.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/OEAC_007_OU_EX_0339.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/Copy_Number_Data_Request/Read_Me.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/OEAC_002_EU_EX_0326.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/WES_seg_files_Yeung_Lab/OEAC_002_OU_EX_0323.modelFinal.seg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/arm_level_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/karyotype_calculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/mb_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/mb_bins_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/processing_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeung_Lab/segments_of_all_samples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chr_arm_annotations_modified_xy_hg19.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chr_arm_annotations_modified_xy_hg38.xlsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="30xn7SivlrIvysmQPomUhmnVT1a" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tal/OneDrive - mail.tau.ac.il/Desktop/OrganoidsCNData/Yeung_Lab&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tal\OneDrive - mail.tau.ac.il\Desktop\OrganoidsCNData\Yeung_Lab" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tal\OneDrive - mail.tau.ac.il\Desktop\OrganoidsCNData\Rubin_Lab" />
+      <recent name="C:\Users\Tal\OneDrive - mail.tau.ac.il\Desktop\OrganoidsCNData\Yeung_Lab\WES_seg_files_Yeung_Lab" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49bc54e9-4bb4-4f0e-92ff-906df1397f27" name="Changes" comment="" />
+      <created>1754577924121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754577924121</updated>
+      <workItem from="1754577925162" duration="119000" />
+      <workItem from="1754578053970" duration="555000" />
+      <workItem from="1754578632241" duration="155000" />
+      <workItem from="1754578806230" duration="352000" />
+      <workItem from="1754810212996" duration="964000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
