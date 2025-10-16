@@ -10,5 +10,5 @@
 | Rubin_Lab     | hg19                                  |
 | Shen_Lab      | hg19                                  |
 | Yeung_Lab     | hg38                                  |
-| Heim Lab      | hg19                                  |
-| Clevers EGAD00001010134 | hg19                        |
+| Heim_Lab      | hg19                                  |
+| Clevers_Lab   | hg19                                  |
