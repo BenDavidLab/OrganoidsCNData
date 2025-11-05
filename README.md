@@ -43,4 +43,4 @@ All cohort results follow the same structure:
 | 10-Yeung_Lab       | hg38                                  |
 | 11-Heim_Lab        | hg19                                  |
 | 12-Clevers_Lab     | hg19                                  |
-| 13-Blandino2_Lab   | hg19                                  |
+| 13-Blandino_patch2_Lab   | hg19                                  |
