@@ -4,15 +4,6 @@
 
 This repository contains Copy Number Variation (CNV) calling results for multiple cohorts analyzed using whole-exome sequencing (WES).
 
-### Cohorts 1-10 (Legacy)
-- Analyzed using original pipeline (see `legacy/`)
-- Results are final and preserved for reproducibility
-
-### Cohorts 11-13 (Current Pipeline)
-- Analyzed using improved pipeline with enhanced logging, validation, and error handling
-- Pipeline is modular, documented, and production-ready (see `pipeline/`)
-- **Methodologically equivalent** to legacy pipeline but with improved code quality
-
 ### Results
 All cohort results follow the same structure:
 - `mb_bins_normalized.csv`
@@ -43,4 +34,4 @@ All cohort results follow the same structure:
 | 10-Yeung_Lab       | hg38                                  |
 | 11-Heim_Lab        | hg19                                  |
 | 12-Clevers_Lab     | hg19                                  |
-| 13-Blandino_patch2_Lab   | hg19                                  |
+
