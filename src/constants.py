@@ -1,22 +1,51 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Mar 19 10:23:53 2024
+===============================================================================
+CONSTANTS.PY - Configuration and Constants
+===============================================================================
+Purpose:
+    Defines global constants used throughout the analysis pipeline including
+    chromosome arm coordinates, arm names, thresholds, and custom color schemes
+    for cancer types.
 
-@author: Linoy
+Dependencies:
+    - None (base configuration file)
+
+Inputs:
+    - None
+
+Outputs:
+    - None (imported by other scripts)
+
+Usage:
+    from constants import ARM_COORDINATES, ARM_LIST, CUSTOM_COLORS, PERCENT_CUTOFF
+
+Author: Linoy
+Created: Tue Mar 19 10:23:53 2024
+===============================================================================
 """
+
 import os
 
+# Chromosome arm coordinates for 1MB bins
 ARM_COORDINATES = [1, 124, 250, 344, 493, 584, 692, 742, 883, 932, 1065, 1125,
                    1236, 1296, 1396, 1441, 1542, 1585, 1681, 1721, 1815, 1868,
                    1951, 1987, 2085, 2103, 2200, 2217, 2308, 2327, 2410, 2447,
                    2501, 2527, 2585, 2604, 2666, 2692, 2725, 2753, 2790, 2802,
                    2837, 2852, 2888, 2949, 3045]
+
+# Chromosome arm start positions
 chr_arm_start = [1, 251, 495, 694, 886, 1067, 1239, 1399, 1546, 1688, 1824, 1960, 2094, 2210, 2318, 2421, 2512, 2594, 2673, 2733, 2797, 2846, 2898]
+
+# List of chromosome arm names
 ARM_LIST = ['1p', '1q', '2p', '2q', '3p', '3q', '4p', '4q', '5p', '5q', '6p', '6q', '7p', '7q', '8p', '8q', '9p', '9q', '10p', '10q', '11p', '11q', '12p', '12q', '13p', '13q', '14p', '14q', 
             '15p', '15q', '16p', '16q', '17p', '17q', '18p', '18q', '19p', '19q', '20p', '20q', '21p', '21q', '22p', '22q', 'Xp', 'Xq']
+
+# Threshold for arm-level discordance (percentage of bins that must be discordant)
 PERCENT_CUTOFF = 75
 
-
+# Custom color palette for cancer types (used in visualizations)
 CUSTOM_COLORS = {
     "Colorectal": "#6268F0",
     "Breast": "#F0A8CC",
@@ -42,5 +71,3 @@ CUSTOM_COLORS = {
     "Gastric": "#a6b7e3",
     "Salivary": "#CCCCFF",
     "Skin": "#000000"}
-
-

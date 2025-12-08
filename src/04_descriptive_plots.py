@@ -1,3 +1,48 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+===============================================================================
+04_DESCRIPTIVE_PLOTS.PY - Descriptive Statistics and Sample Distribution Plots
+===============================================================================
+Execution Order: 4 (First plotting script)
+
+Purpose:
+    Creates descriptive visualizations showing the distribution of samples,
+    models, and cancer types in the dataset. Generates publication-quality
+    figures for cohort characterization.
+    
+    Part 1: Pie charts of cancer type distribution (by sample and by model)
+    Part 2: Histograms of PDO/PDX passage distributions
+    Part 3: Bar charts of sample matching statistics (PT-PDO, PT-PDO-PDX, etc.)
+
+Dependencies:
+    - utility_functions.py
+    - constants.py
+    - all_sample_matches_reshaped.csv (from 02_PDO_sample_analysis.py)
+    - all_sample_matches_table.csv (from 02_PDO_sample_analysis.py)
+    - merged_pdx_and_organoid_disc_table.csv (from 03_PDO_PDX_analysis.py)
+    - metadata_organoids.csv (from 01_update_metadata.py)
+
+Inputs:
+    - all_sample_matches_reshaped.csv
+    - all_sample_matches_table.csv
+    - merged_pdx_and_organoid_disc_table.csv
+    - metadata_organoids.csv
+
+Outputs (plots/ directory):
+    - Sample_distribution_by_cancer_type.pdf
+    - Model_distribution_by_cancer_type.pdf
+    - Organoid_passage_distribution_seaborn_clean.pdf
+    - PDX_passage_distribution_all_seaborn_clean.pdf
+    - sample_matching_distribution.pdf
+
+Usage:
+    python 04_descriptive_plots.py
+
+Author: Linoy
+===============================================================================
+"""
+
 import os
 import sys
 import pandas as pd
@@ -22,8 +67,8 @@ matches by sample (row = sample = organoid/pdx) + discordance.
 os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
 root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
 
-from Code.utility_functions import *
-from Code.constants import *
+from utility_functions import *
+from constants import *
 
 all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
 all_samples = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_table.csv"))
@@ -300,4 +345,3 @@ for spine in ax.spines.values():
 plt.tight_layout()
 plt.savefig(os.path.join(root, "plots","sample_matching_distribution.pdf"), dpi=300)
 plt.show()
-

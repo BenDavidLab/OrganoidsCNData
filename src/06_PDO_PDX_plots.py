@@ -1,3 +1,58 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+===============================================================================
+06_PDO_PDX_PLOTS.PY - Comparative PDO vs PDX Analysis and Visualization
+===============================================================================
+Execution Order: 6 (Final plotting script)
+
+Purpose:
+    Creates comparative visualizations between PDO and PDX models, analyzing
+    differences in genomic stability, passage effects, and cumulative discordance
+    distributions. Provides statistical comparisons between model types.
+    
+    Part 1: Side-by-side boxplots comparing PDO vs PDX by cancer type (with p-values)
+    Part 2: Regression analysis of discordance vs passage (with interaction terms)
+    Part 3: Cumulative distribution (ECDF) plots comparing PDO vs PDX stability
+
+Dependencies:
+    - utility_functions.py
+    - constants.py
+    - all_sample_matches_reshaped.csv (from 02_PDO_sample_analysis.py)
+    - merged_pdx_and_organoid_disc_table.csv (from 03_PDO_PDX_analysis.py)
+    - hoge_pdx_disc_table_Linoy.csv (PDX data)
+
+Inputs:
+    - all_sample_matches_reshaped.csv
+    - merged_pdx_and_organoid_disc_table.csv
+    - PDX_data/hoge_pdx_disc_table_Linoy.csv
+
+Outputs (plots/ directory):
+    - Tumor-model_percent_genome_discordanceUnmatched_analysis_pval.pdf
+    - Tumor-model_number_of_arms_discordantUnmatched_analysis_pval.pdf
+    - PT_model_genome_discordance_vs_passage_with_ci_log.pdf
+    - PT_model_arms_discordance_vs_passage_with_ci.pdf
+    - genome_discordance_ecdf_mw.pdf
+    - arms_discordance_ecdf_mw.pdf
+
+Statistical Tests:
+    - Independent t-tests (PDO vs PDX by cancer type)
+    - Linear regression with interaction terms (passage effects)
+    - Mann-Whitney U test (overall model comparison)
+    - Kolmogorov-Smirnov test (distribution comparison)
+
+Key Comparisons:
+    - PDO vs PDX discordance levels across cancer types
+    - Passage-dependent changes in both model types
+    - Cumulative percentage of models exceeding stability thresholds
+
+Usage:
+    python 06_PDO_PDX_plots.py
+
+Author: Linoy
+===============================================================================
+"""
+
 import os
 import sys
 import pandas as pd

@@ -1,3 +1,50 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+===============================================================================
+02_PDO_SAMPLE_ANALYSIS.PY - PDO Sample Match and Discordance Analysis
+===============================================================================
+Execution Order: 2
+
+Purpose:
+    Creates comprehensive tables of PDO (Patient-Derived Organoid) matches and
+    calculates discordance metrics between primary tumors and organoid samples.
+    
+    Part 1: Creates a patient-level matches table showing all samples per patient
+    Part 2: Reshapes to sample-level table with one row per organoid/PDX sample
+    Part 3: Creates average discordance table per tumor (averaging multiple passages)
+
+Dependencies:
+    - utility_functions.py
+    - constants.py
+    - metadata_organoids.csv (from 01_update_metadata.py)
+
+Inputs:
+    - metadata_organoids.csv
+    - {cohort_index}_{cohort_name}_matches_table.csv (per cohort)
+    - {cohort_index}_{cohort_name}_mb_bins_normalized.csv (per cohort)
+    - {cohort_index}_{cohort_name}_arm_level_normalized.csv (per cohort)
+
+Outputs:
+    - all_sample_matches_table.csv 
+      (patient-level: one row per patient/model with all passages)
+    - all_sample_matches_reshaped.csv 
+      (sample-level: one row per organoid/PDX sample with discordance metrics)
+    - all_sample_matches_reshaped_average.csv 
+      (tumor-level: average discordance across all passages per tumor)
+
+Key Metrics:
+    - Percent_genome_discordance: Percentage of genome bins showing CN discordance
+    - Num_arms_disc: Number of chromosome arms showing discordance
+    - Passage information extracted from sample names
+
+Usage:
+    python 02_PDO_sample_analysis.py
+
+Author: Linoy
+===============================================================================
+"""
+
 import os
 import sys
 import pandas as pd
@@ -11,8 +58,8 @@ from collections import defaultdict
 os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
 root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
 
-from Code.utility_functions import *
-from Code.constants import *
+from utility_functions import *
+from constants import *
 
 metadata = pd.read_csv(os.path.join(root, "metadata_organoids.csv"), header=0)
 metadata = metadata.drop(metadata.index[-1]).copy()

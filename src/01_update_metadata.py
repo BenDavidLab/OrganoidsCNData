@@ -1,10 +1,48 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+===============================================================================
+01_UPDATE_METADATA.PY - Update Metadata Summary Statistics
+===============================================================================
+Execution Order: 1 
+
+Purpose:
+    Updates the metadata_organoids.csv file with current statistics from all
+    cohorts including patient counts, tumor counts, organoid counts, PDX counts,
+    and passage information. Generates a summary row with totals across all cohorts.
+
+Dependencies:
+    - utility_functions.py
+    - constants.py
+
+Inputs:
+    - metadata_organoids.csv (existing metadata file)
+    - {cohort_index}_{cohort_name}_matches_table.csv files from each cohort folder
+
+Outputs:
+    - metadata_organoids.csv (updated with current statistics)
+
+Key Statistics Calculated:
+    - Number of unique patients per cohort
+    - Number of tumor samples
+    - Number of organoid samples (including passages)
+    - Number of PDX, 2D, PDXO, spheroid, and normal tissue samples
+    - Counts of organoid passages and multiple tumor sections
+
+Usage:
+    python 01_update_metadata.py
+
+Author: Linoy
+===============================================================================
+"""
+
 import os
 import pandas as pd
 import numpy as np
 import re
 
-from Code.utility_functions import *
-from Code.constants import *
+from utility_functions import *
+from constants import *
 
 metadata_filepath = os.path.join(root, "meta_data_organoids.csv")
 metadata = pd.read_csv(metadata_filepath, header=0)

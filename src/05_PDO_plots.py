@@ -1,3 +1,57 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+===============================================================================
+05_PDO_PLOTS.PY - PDO-Specific Analysis and Visualization
+===============================================================================
+Execution Order: 5
+
+Purpose:
+    Creates comprehensive visualizations for PDO (Patient-Derived Organoid)
+    discordance analysis including cancer type comparisons, passage effects,
+    and temporal stability assessments.
+    
+    Part 1: Boxplots of genome/arm discordance by cancer type (sample & model analysis)
+    Part 2: Scatter plots of discordance vs passage number
+    Part 3: Barplots comparing genome vs arm discordance by cohort
+    Part 4: Waterfall and line plots showing temporal changes (earliest vs latest)
+
+Dependencies:
+    - utility_functions.py
+    - constants.py
+    - all_sample_matches_reshaped.csv (from 02_PDO_sample_analysis.py)
+    - all_sample_matches_reshaped_average.csv (from 02_PDO_sample_analysis.py)
+    - all_sample_matches_table.csv (from 02_PDO_sample_analysis.py)
+
+Inputs:
+    - all_sample_matches_reshaped.csv (sample-level data)
+    - all_sample_matches_reshaped_average.csv (model-level averages)
+    - all_sample_matches_table.csv (patient-level data)
+
+Outputs (plots/ directory):
+    - PT-PDO_samples_genome_disc_by_cancer_type_sns.pdf
+    - PT-PDO_samples_arms_disc_by_cancer_type.pdf
+    - PT-PDO_models_genome_disc_by_cancer_type.pdf
+    - PT-PDO_models_arms_disc_by_cancer_type.pdf
+    - PT-PDO_genome_disc_vs_passage.pdf
+    - PT-PDO_arms_disc_vs_passage.pdf
+    - Genome_vs_arm_disc_by_cohort.pdf
+    - waterfall_genome.pdf
+    - waterfall_arms.pdf
+    - PT_PDO_genome_discordance_early_vs_latest.pdf
+    - PT_PDO_arm_discordance_early_vs_latest.pdf
+
+Statistical Tests:
+    - One-sample t-test for temporal changes (waterfall plots)
+    - Comparison of earliest vs latest passages
+
+Usage:
+    python 05_PDO_plots.py
+
+Author: Linoy
+===============================================================================
+"""
+
 import os
 import sys
 import seaborn as sns

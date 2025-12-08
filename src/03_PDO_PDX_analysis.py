@@ -1,3 +1,50 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+===============================================================================
+03_PDO_PDX_ANALYSIS.PY - PDX Sample Analysis and Integration with PDO Data
+===============================================================================
+Execution Order: 3
+
+Purpose:
+    Analyzes PDX (Patient-Derived Xenograft) samples from Hoge et al. 2018 data
+    and integrates them with PDO analysis results for comparative studies.
+    
+    Part 1: Creates tumor-PDX discordance table from Hoge data
+    Part 2: Reshapes to sample-level (one row per PDX)
+    Part 3: Merges PDX and PDO sample tables for unified analysis
+
+Dependencies:
+    - utility_functions.py
+    - constants.py
+    - all_sample_matches_reshaped.csv (from 02_PDO_sample_analysis.py)
+
+Inputs:
+    - PDX_data/1mb_bins_logr_tables/*.csv (Hoge et al. PDX bins data)
+    - PDX_data/pairings_files/*.csv (PDX-tumor pairings)
+    - all_sample_matches_reshaped.csv
+
+Outputs:
+    - Hoge_data_PDX_disc_table.csv 
+      (tumor-level: multiple PDXs per tumor, includes PDX1-PDX2 comparisons)
+    - Hoge_data_PDX_disc_table_single_PDXs.csv 
+      (sample-level: one row per PDX sample)
+    - merged_pdx_and_organoid_disc_table.csv 
+      (combined PDO+PDX sample-level table for comparative analysis)
+
+Key Metrics:
+    - PT_PDX1_gen_disc, PT_PDX2_gen_disc: Tumor-PDX genome discordance
+    - PT_PDX1_arms_disc, PT_PDX2_arms_disc: Tumor-PDX arm discordance
+    - PDX1_PDX2_gen_disc: Between-passage PDX discordance
+    - Passage_difference: Passage gap between PDX1 and PDX2
+
+Usage:
+    python 03_PDO_PDX_analysis.py
+
+Author: Linoy
+===============================================================================
+"""
+
 import os
 import sys
 import pandas as pd
@@ -11,8 +58,8 @@ import re
 os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
 root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
 
-from Code.utility_functions import *
-from Code.constants import *
+from utility_functions import *
+from constants import *
 
 bins_tables_path = os.path.join(root, "PDX_data", "1mb_bins_logr_tables")
 pairings_files_path = os.path.join(root, "PDX_data", "pairings_files")

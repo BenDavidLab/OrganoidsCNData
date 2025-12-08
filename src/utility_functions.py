@@ -1,21 +1,51 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Mar 19 10:21:57 2024
+===============================================================================
+UTILITY_FUNCTIONS.PY - Helper Functions for Copy Number Analysis
+===============================================================================
+Purpose:
+    Provides core utility functions for copy number discordance calculations,
+    sample name processing, cancer type mapping, and visualization helpers.
+    
+Key Functions:
+    - get_disc_list(): Calculate bin-level discordance between two samples
+    - perc_genome_disc(): Calculate percentage of genome discordant
+    - arms_by_pipe(): Calculate number of arms discordant from pipeline output
+    - get_arms_disc(): Calculate arm discordance from bins table
+    - discordance_comparison(): Compare two samples (bins + arms)
+    - discordance_comparison_bins(): Compare two samples (bins-based only)
+    - map_cancer_type(): Standardize cancer type names across cohorts
+    - get_passage(): Extract passage number from sample name
+    - Other helper functions
 
-@author: Linoy
+Dependencies:
+    - constants.py (ARM_COORDINATES, PERCENT_CUTOFF)
+    - pandas, numpy, matplotlib, seaborn, re
+
+Inputs:
+    - None (imported by other scripts)
+
+Outputs:
+    - None (functions called by other scripts)
+
+Usage:
+    from utility_functions import perc_genome_disc, map_cancer_type
+
+Author: Linoy
+Created: Tue Mar 19 10:21:57 2024
+===============================================================================
 """
+
 import os
 import sys
-
-#root = r"/workspaces/Organoid_Stability"
-#sys.path.append(os.path.abspath(root))
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import re
 
-from Code.constants import *
+from constants import *
 
 def get_disc_list(sample_bins1, sample_bins2, discordance_threshold1, discordance_threshold2):
     '''
