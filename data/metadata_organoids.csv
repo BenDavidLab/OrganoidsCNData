@@ -1,0 +1,14 @@
+cohort_index,cohort_name,Cancer_type,Patients,Tumor,Organoid,Normal_tissue,PDX,2D,PDXO,spheroids,organoid_passages,multiple_tumor_sections,multiple_pdxs,Blood
+1,Yeung_lab,Esophageal adenocarcinoma,7,7,7,7,0,0,0,0,0,0,0,0
+2,Khurana_lab,Prostate cancer,14,14,14,0,3,0,0,0,0,0,0,0
+4,Blandino_lab,multiple_cancers,11,13,13,0,0,0,0,0,0,0,0,0
+5,Leung_lab_CRC,Colorectal cancer,18,22,32,0,0,0,0,0,10,0,0,0
+6,Rubin_lab,multiple_cancers,14,14,27,0,7,0,0,0,13,0,0,0
+8,De_Julio_lab_bladder,Bladder cancer,21,21,21,0,0,0,0,0,0,0,0,0
+11,Leung_lab_gastric,Gastric cancer,34,42,47,0,0,0,0,0,5,0,0,0
+12,Abud_lab,Colorectal cancer,12,12,12,0,0,0,0,0,0,0,0,0
+20,Shen_lab,Bladder cancer,19,19,68,0,13,0,8,0,49,0,0,0
+21,Furukawa_lab,Salivary gland,2,2,3,0,0,1,0,0,1,0,0,0
+29,Clevers_lab,Head and neck,7,7,7,6,0,0,0,0,0,0,0,0
+30,Heim_lab,Liver,10,10,10,10,0,0,0,0,0,0,0,0
+999,Total Summary,All cancers,169,183,261,23,23,1,8,0,78,0,0,0

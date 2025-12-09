@@ -1,0 +1,30 @@
+# Pre-Processing Pipeline Requirements
+# Install with: pip install -r requirements.txt
+# Python 3.8+ required
+
+# Core CNV analysis
+cnvkit>=0.9.9
+
+# Data manipulation
+pandas>=1.3.0
+numpy>=1.21.0
+
+# File format support
+openpyxl>=3.0.0              # For Excel arm annotations
+
+# Visualization (optional but recommended)
+matplotlib>=3.3.0
+scipy>=1.7.0
+
+# BAM file handling (CNVkit dependency)
+pysam>=0.16.0
+
+# NOTE: For CBS segmentation method in CNVkit, R with DNAcopy is required:
+# Install in R console:
+#   if (!require("BiocManager", quietly = TRUE))
+#       install.packages("BiocManager")
+#   BiocManager::install("DNAcopy")
+
+# System dependencies (install via package manager):
+# - bwa-mem (or bwa)
+# - samtools (>= 1.10)
