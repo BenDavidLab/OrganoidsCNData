@@ -3,7 +3,7 @@
 This directory contains scripts for analyzing copy number variation (CNV) discordance between primary tumors and patient-derived models (organoids and xenografts) and generating publication-quality visualizations.
 
 ### Pipeline Overview
-Pre-processed CNV data (from preprocessing/) → [01_update_metadata.py] → Updated cohort statistics
+Pre-processed CNV data (from preprocessing/) → [01_update_metadata.py] → Updated cohort statistics  
 [02_PDO_sample_analysis.py] → Sample-level discordance tables    
 [03_PDO_PDX_analysis.py] → Integrated PDO-PDX analysis    
 [04_descriptive_plots.py] → Descriptive statistics figures    
