@@ -48,7 +48,8 @@ Statistical Tests:
 Usage:
     python 05_PDO_plots.py
 
-Author: Linoy
+Author: Linoy Raz
+Contributors: Haia Khoury 
 ===============================================================================
 """
 
@@ -64,19 +65,14 @@ from scipy.stats import mannwhitneyu, ttest_1samp
 from statannotations.Annotator import Annotator
 from matplotlib.ticker import MaxNLocator
 import matplotlib.ticker as mtick
-
-#root = r"/workspaces/Organoid_Stability"
-#sys.path.append(os.path.abspath(root))
-os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
-root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
-
-
 from Code.utility_functions import *
 from Code.constants import *
 
 ''' This code uses the all_sample_matches_reshaped table that shows all the organoid
 matches we have by organoid (organoid = row), adds genome discordance and creates
 different boxplots '''
+
+root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
 
 all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
 all_sample_matches_reshaped_average = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped_average.csv"))

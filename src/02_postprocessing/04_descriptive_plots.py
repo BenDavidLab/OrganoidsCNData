@@ -39,7 +39,8 @@ Outputs (plots/ directory):
 Usage:
     python 04_descriptive_plots.py
 
-Author: Linoy
+Author: Linoy Raz
+Contributors: Haia Khoury 
 ===============================================================================
 """
 
@@ -52,6 +53,8 @@ import numpy as np
 from collections import Counter
 import matplotlib as mpl
 import seaborn as sns
+from utility_functions import *
+from constants import *
 
 ''' This code uses:
     * the all_sample_matches_reshaped table that shows all the 
@@ -60,15 +63,7 @@ matches by sample (row = sample = organoid/pdx) + discordance.
     * the metadata table
     It only includes PDXs collected for this study.''' 
 
-
-#root = r"/workspaces/Organoid_Stability"
-#sys.path.append(os.path.abspath(root))
-
-os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
-root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
-
-from utility_functions import *
-from constants import *
+root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
 
 all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
 all_samples = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_table.csv"))

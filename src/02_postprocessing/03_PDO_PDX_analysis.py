@@ -41,7 +41,8 @@ Key Metrics:
 Usage:
     python 03_PDO_PDX_analysis.py
 
-Author: Linoy
+Author: Linoy Raz
+Contributors: Haia Khoury 
 ===============================================================================
 """
 
@@ -50,16 +51,10 @@ import sys
 import pandas as pd
 import numpy as np
 import re
-
-
-#root = r"/workspaces/Organoid_Stability"
-#sys.path.append(os.path.abspath(root))
-
-os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
-root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
-
 from utility_functions import *
 from constants import *
+
+root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
 
 bins_tables_path = os.path.join(root, "PDX_data", "1mb_bins_logr_tables")
 pairings_files_path = os.path.join(root, "PDX_data", "pairings_files")

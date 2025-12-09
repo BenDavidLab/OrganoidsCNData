@@ -32,8 +32,9 @@ Outputs:
 Usage:
     from utility_functions import perc_genome_disc, map_cancer_type
 
-Author: Linoy
+Author: Linoy Raz
 Created: Tue Mar 19 10:21:57 2024
+Contributors: Haia Khoury 
 ===============================================================================
 """
 

@@ -21,8 +21,9 @@ Outputs:
 Usage:
     from constants import ARM_COORDINATES, ARM_LIST, CUSTOM_COLORS, PERCENT_CUTOFF
 
-Author: Linoy
+Author: Linoy Raz
 Created: Tue Mar 19 10:23:53 2024
+Contributors: Haia Khoury 
 ===============================================================================
 """
 

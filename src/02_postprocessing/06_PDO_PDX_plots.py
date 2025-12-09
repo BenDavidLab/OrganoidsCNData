@@ -49,7 +49,8 @@ Key Comparisons:
 Usage:
     python 06_PDO_PDX_plots.py
 
-Author: Linoy
+Author: Linoy Raz
+Contributors: Haia Khoury 
 ===============================================================================
 """
 
@@ -62,13 +63,6 @@ from scipy.stats import ttest_ind, linregress, ks_2samp, mannwhitneyu, t
 import statsmodels.formula.api as smf
 from sklearn.linear_model import LinearRegression
 from matplotlib.ticker import PercentFormatter, MultipleLocator
-
-#root = r"/workspaces/Organoid_Stability"
-#sys.path.append(os.path.abspath(root))
-
-os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
-root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
-
 from Code.utility_functions import *
 from Code.constants import *
 
@@ -81,6 +75,8 @@ from Code.constants import *
                                                           = sample = point)
     * Multiple PDOs from the same PT are individual data points
     * Only cohorts with >3 organoids'''
+
+root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
 
 all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
 hoge_PDX_table_linoy = pd.read_csv(os.path.join(root, "PDX_data", "hoge_pdx_disc_table_Linoy.csv"))

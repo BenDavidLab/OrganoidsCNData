@@ -41,7 +41,8 @@ Key Metrics:
 Usage:
     python 02_PDO_sample_analysis.py
 
-Author: Linoy
+Author: Linoy Raz
+Contributors: Haia Khoury 
 ===============================================================================
 """
 
@@ -51,15 +52,10 @@ import pandas as pd
 import numpy as np
 import re
 from collections import defaultdict
-
-#root = r"/workspaces/Organoid_Stability"
-#sys.path.append(os.path.abspath(root))
-
-os.chdir(r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability")
-root = r"C:\Users\linoy\OneDrive\Desktop\New folder\Organoid_Stability"
-
 from utility_functions import *
 from constants import *
+
+root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
 
 metadata = pd.read_csv(os.path.join(root, "metadata_organoids.csv"), header=0)
 metadata = metadata.drop(metadata.index[-1]).copy()
