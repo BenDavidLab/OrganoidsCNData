@@ -22,12 +22,3 @@ Python Dependencies - All dependencies are listed in requirements.txt:
 bash - Install from repository root
 pip install -r requirements.txt
 
-#### Output Structure
-results/Cohort_data/
-├── 1_CohortName1/
-│   ├── 1_CohortName1_matches_table.csv      # Sample matching info
-│   ├── 1_CohortName1_mb_bins_normalized.csv # 1MB binned CNV data
-│   └── 1_CohortName1_arm_level_normalized.csv # Arm-level CNV data
-├── 2_CohortName2/
-│   └── ...
-└── ...

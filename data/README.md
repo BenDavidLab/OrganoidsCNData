@@ -1,13 +1,6 @@
 # Data Directory
 This directory contains input data files required for the analysis pipeline.
 
-### Structure
-data/
-├── README.md                      # This file
-├── reference_files/               # Genome reference files
-│   └── [genome version files]
-└── metadata_organoids.csv         # Cohort metadata
-
 ### Files
 - metadata_organoids.csv
 Cohort-level metadata file that tracks all patient cohorts in the study.
