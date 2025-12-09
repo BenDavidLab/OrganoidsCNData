@@ -51,13 +51,22 @@ import sys
 import pandas as pd
 import numpy as np
 import re
+
+# Auto-detect repository root (2 levels up from this script)
+# Script location: repo_root/src/postprocessing/03_PDO_PDX_analysis.py
+script_dir = os.path.dirname(os.path.abspath(__file__))
+repo_root = os.path.dirname(os.path.dirname(script_dir))
+root = repo_root
+
+# Add postprocessing directory to path for imports
+sys.path.insert(0, script_dir)
+
 from utility_functions import *
 from constants import *
 
-root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
-
-bins_tables_path = os.path.join(root, "PDX_data", "1mb_bins_logr_tables")
-pairings_files_path = os.path.join(root, "PDX_data", "pairings_files")
+# Define paths using new structure (results/ directory)
+bins_tables_path = os.path.join(root, "results", "PDX_data", "1mb_bins_logr_tables")
+pairings_files_path = os.path.join(root, "results", "PDX_data", "pairings_files")
 bins_tables_dict = {}  
 pairings_dict = {}  
 

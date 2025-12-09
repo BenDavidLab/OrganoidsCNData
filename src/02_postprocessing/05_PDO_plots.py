@@ -53,7 +53,6 @@ Contributors: Haia Khoury
 ===============================================================================
 """
 
-import os
 import sys
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -65,18 +64,31 @@ from scipy.stats import mannwhitneyu, ttest_1samp
 from statannotations.Annotator import Annotator
 from matplotlib.ticker import MaxNLocator
 import matplotlib.ticker as mtick
-from Code.utility_functions import *
-from Code.constants import *
+
+
+# Auto-detect repository root (2 levels up from this script)
+# Script location: repo_root/src/postprocessing/05_PDO_plots.py
+import os
+import sys
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+repo_root = os.path.dirname(os.path.dirname(script_dir))
+root = repo_root
+
+# Add postprocessing directory to path for imports
+sys.path.insert(0, script_dir)
+
+
+from utility_functions import *
+from constants import *
 
 ''' This code uses the all_sample_matches_reshaped table that shows all the organoid
 matches we have by organoid (organoid = row), adds genome discordance and creates
 different boxplots '''
 
-root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
-
-all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
-all_sample_matches_reshaped_average = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped_average.csv"))
-all_sample_matches_table = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_table.csv"))
+all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_reshaped.csv"))
+all_sample_matches_reshaped_average = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_reshaped_average.csv"))
+all_sample_matches_table = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_table.csv"))
 
 all_sample_matches_reshaped = map_cancer_type(all_sample_matches_reshaped)
 
@@ -164,7 +176,7 @@ def plot_discordance_sns(data, metric, title, ylabel, colors, filename):
 
 
     plt.tight_layout()
-    plt.savefig(os.path.join(root, "plots", f"{filename}"), dpi=300)
+    plt.savefig(os.path.join(root, "results", "plots", f"{filename}"), dpi=300)
     plt.show()
 
 filtered_data_genome = filtered_data.groupby('Cancer_type').filter(
@@ -267,7 +279,7 @@ handles = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=CUSTOM_CO
 g1.ax.legend(handles, cancer_order_genome, title="Cancer type", bbox_to_anchor=(1.01, 1), loc='upper left', frameon=False)
 
 g1.fig.tight_layout()
-g1.savefig(os.path.join(root, "plots", "PT-PDO_models_genome_disc_by_cancer_type.pdf"), dpi=300)
+g1.savefig(os.path.join(root, "results", "plots", "PT-PDO_models_genome_disc_by_cancer_type.pdf"), dpi=300)
 plt.show()
 
 # Arms discordance
@@ -303,7 +315,7 @@ handles_arm = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=CUSTO
 g2.ax.legend(handles_arm, cancer_order_arm, title="Cancer type", bbox_to_anchor=(1.01, 1), loc='upper left', frameon=False)
 
 g2.fig.tight_layout()
-g2.savefig(os.path.join(root, "plots", "PT-PDO_models_arms_disc_by_cancer_type.pdf"), dpi=300)
+g2.savefig(os.path.join(root, "results", "plots", "PT-PDO_models_arms_disc_by_cancer_type.pdf"), dpi=300)
 plt.show()
 
 ###########
@@ -414,7 +426,7 @@ plt.xlabel('Cancer type', fontsize=18, labelpad=35)
 plt.ylabel('Genome discordance', fontsize=18)
 plt.title('Tumor-model genome discordance\n(Matched models)', fontsize=20)
 plt.tight_layout(rect=[0, 0, 1, 1])
-plt.savefig(os.path.join(root, "plots", "Matched_TO_TP_perc_genome_disc_by_cancer_type.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "Matched_TO_TP_perc_genome_disc_by_cancer_type.pdf"), dpi=300)
 plt.show()
 
 for cancer_type, pval in pvalue_dict.items():
@@ -475,7 +487,7 @@ plt.xlabel('Cancer type', fontsize=18, labelpad=15)
 plt.ylabel('Number of arms discordant', fontsize=18)
 plt.title('Tumor-model arm discordance\n(Matched models)', fontsize=20)
 plt.tight_layout(rect=[0, 0, 1, 1])
-plt.savefig(os.path.join(root, "plots", "Matched_TO_TP_num_arms_disc_by_cancer_type.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "Matched_TO_TP_num_arms_disc_by_cancer_type.pdf"), dpi=300)
 plt.show()
 
 for cancer_type, pval in pvalue_dict_arms.items():
@@ -562,7 +574,7 @@ def plot_discordance(data, value_col, ylabel, title, output_name, decimal_places
         g.ax.yaxis.set_major_formatter(mtick.PercentFormatter())
     g.fig.tight_layout(rect=[0, 0, 0.9, 0.93])
     g.fig.subplots_adjust(top=0.9)
-    output_path = os.path.join(root, "plots", output_name)
+    output_path = os.path.join(root, "results", "plots", output_name)
     g.fig.savefig(output_path, dpi=300, bbox_inches="tight")
     plt.show()
 
@@ -577,8 +589,8 @@ latest organoid we have for matches samples with more than one organoid regardle
 The statistics is one-sided one sample ttest assuming that the delta will be positive.
 Statistics results are in printouts'''
 
-all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
-all_sample_matches_table = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_table.csv"))
+all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_reshaped.csv"))
+all_sample_matches_table = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_table.csv"))
 
 organoid_pass_cols = [col for col in all_sample_matches_table.columns if col.startswith("Organoid")]
 
@@ -704,7 +716,7 @@ def plot_matched_lines(paired_df, early_col, late_col, ylabel, title, filename):
         spine.set_linewidth(0.5)
     plt.tight_layout()
     os.makedirs(output_folder, exist_ok=True)
-    plt.savefig(os.path.join(root, "plots", f"{filename}.pdf"), dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join(root, "results", "plots", f"{filename}.pdf"), dpi=300, bbox_inches='tight')
     plt.show()
 
 import matplotlib as mpl
@@ -735,7 +747,7 @@ def plot_matched_lines_genome(paired_df, early_col, late_col, ylabel, title, fil
         spine.set_linewidth(0.5)
     plt.tight_layout()
     os.makedirs(output_folder, exist_ok=True)
-    plt.savefig(os.path.join(root, "plots", f"{filename}.pdf"), dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join(root, "results", "plots", f"{filename}.pdf"), dpi=300, bbox_inches='tight')
     plt.show()
 
 plot_matched_lines_genome(paired_samples_latest, 'Early_genome_disc', 'Late_genome_disc',

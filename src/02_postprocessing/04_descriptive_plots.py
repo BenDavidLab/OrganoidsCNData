@@ -53,8 +53,6 @@ import numpy as np
 from collections import Counter
 import matplotlib as mpl
 import seaborn as sns
-from utility_functions import *
-from constants import *
 
 ''' This code uses:
     * the all_sample_matches_reshaped table that shows all the 
@@ -63,10 +61,24 @@ matches by sample (row = sample = organoid/pdx) + discordance.
     * the metadata table
     It only includes PDXs collected for this study.''' 
 
-root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
+# Auto-detect repository root (2 levels up from this script)
+# Script location: repo_root/src/postprocessing/04_descriptive_plots.py
+import os
+import sys
 
-all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
-all_samples = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_table.csv"))
+script_dir = os.path.dirname(os.path.abspath(__file__))
+repo_root = os.path.dirname(os.path.dirname(script_dir))
+root = repo_root
+
+# Add postprocessing directory to path for imports
+sys.path.insert(0, script_dir)
+
+from utility_functions import *
+from constants import *
+
+# Load data using new repository structure
+all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_reshaped.csv"))
+all_samples = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_table.csv"))
 
 #######################################
 ## Part 1 ##
@@ -106,7 +118,7 @@ plt.text(0, -1.3, f'Total samples: {total_samples}', horizontalalignment='center
 
 plt.gca().tick_params(axis='both', which='both', bottom=True, top=False, left=True, right=False, direction='out', length=6, width=0.5)
 
-plt.savefig(os.path.join(root, "plots", "Sample_distribution_by_cancer_type.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "Sample_distribution_by_cancer_type.pdf"), dpi=300)
 plt.show()
 
 model_df = all_samples
@@ -141,7 +153,7 @@ plt.text(0, -1.2, f'Total models: {total_models}', horizontalalignment='center',
 
 plt.gca().tick_params(axis='both', which='both', bottom=True, top=False, left=True, right=False, direction='out', length=6, width=0.5)
 
-plt.savefig(os.path.join(root, "plots", "Model_distribution_by_cancer_type.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "Model_distribution_by_cancer_type.pdf"), dpi=300)
 plt.show()
 
 ########################
@@ -151,7 +163,7 @@ plt.show()
 
 sns.set_theme(style="white")
 
-merged_df = pd.read_csv(os.path.join(root, "tables", "merged_pdx_and_organoid_disc_table.csv"))
+merged_df = pd.read_csv(os.path.join(root, "results", "tables", "merged_pdx_and_organoid_disc_table.csv"))
 merged_df['Passage'] = pd.to_numeric(merged_df['Passage'], errors='coerce')
 all_sample_matches_reshaped['Passage'] = pd.to_numeric(all_sample_matches_reshaped['Passage'], errors='coerce')
 
@@ -192,7 +204,7 @@ plt.text(0.5, -0.22, f'Total organoid Samples: {total_all}',
          ha='center', va='center', transform=plt.gca().transAxes, fontsize=18)
 
 plt.tight_layout()
-plt.savefig(os.path.join(root, "plots", "Organoid_passage_distribution_seaborn_clean.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "Organoid_passage_distribution_seaborn_clean.pdf"), dpi=300)
 plt.show()
 
 #PDX
@@ -228,7 +240,7 @@ plt.text(0.5, -0.22, f'Total PDX Samples: {total_all}',
          ha='center', va='center', transform=plt.gca().transAxes, fontsize=18)
 
 plt.tight_layout()
-plt.savefig(os.path.join(root, "plots", "PDX_passage_distribution_all_seaborn_clean.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "PDX_passage_distribution_all_seaborn_clean.pdf"), dpi=300)
 plt.show()
 
 ###############################################################
@@ -283,7 +295,7 @@ plt.show()
 ################
 ''' Same but also including patients and tumor models'''
 
-metadata_filepath = os.path.join(root, "metadata_organoids.csv")
+metadata_filepath = os.path.join(root, "data", "metadata_organoids.csv")
 metadata_df = pd.read_csv(metadata_filepath)
 
 summary_row = metadata_df[metadata_df['cohort_name'] == 'Total Summary'].iloc[0]
@@ -338,5 +350,5 @@ for spine in ax.spines.values():
     spine.set_linewidth(0.5)
 
 plt.tight_layout()
-plt.savefig(os.path.join(root, "plots","sample_matching_distribution.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots","sample_matching_distribution.pdf"), dpi=300)
 plt.show()

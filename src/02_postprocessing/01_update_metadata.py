@@ -38,15 +38,26 @@ Contributors: Haia Khoury
 """
 
 import os
+import sys
 import pandas as pd
 import numpy as np
 import re
+
+# Auto-detect repository root (2 levels up from this script)
+# Script location: repo_root/src/postprocessing/01_update_metadata.py
+script_dir = os.path.dirname(os.path.abspath(__file__))
+repo_root = os.path.dirname(os.path.dirname(script_dir))
+
+# Add postprocessing directory to path for imports
+sys.path.insert(0, script_dir)
+
 from utility_functions import *
 from constants import *
 
-root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
+# Set root to repository root for data access
+root = repo_root
 
-metadata_filepath = os.path.join(root, "metadata_organoids.csv")
+metadata_filepath = os.path.join(root, "data", "metadata_organoids.csv")
 metadata = pd.read_csv(metadata_filepath, header=0)
 
 summary_index = metadata.index[-1]
@@ -66,9 +77,7 @@ for idx, row in cohort_metadata.iterrows():
     cohort_index = row["cohort_index"]
     cohort_name = row["cohort_name"]
 
-    # NOTE: Cohort_data directory must be created by running the pre-processing pipeline
-    # Where in this Directory you have all the cohort results (arm-bin level binning, and seg files) organized in directories for each cohort
-    cohort_folder = os.path.join(root, "Cohort_data", f"{int(cohort_index)}_{cohort_name}")
+    cohort_folder = os.path.join(root, "results", "Cohort_data", f"{int(cohort_index)}_{cohort_name}")
     matches_table_path = os.path.join(cohort_folder, f"{int(cohort_index)}_{cohort_name}_matches_table.csv")
 
     matches_table = pd.read_csv(matches_table_path)
@@ -114,4 +123,4 @@ summary_row["Cancer_type"] = "All cancers"
 metadata.update(cohort_metadata)
 metadata = pd.concat([cohort_metadata, pd.DataFrame([summary_row])], ignore_index=True)
 
-metadata.to_csv(os.path.join(root, "metadata_organoids.csv"), index=False)
+metadata.to_csv(os.path.join(root, "data", "metadata_organoids.csv"), index=False)

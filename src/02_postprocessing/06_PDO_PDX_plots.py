@@ -54,7 +54,6 @@ Contributors: Haia Khoury
 ===============================================================================
 """
 
-import os
 import sys
 import pandas as pd
 import seaborn as sns
@@ -63,6 +62,20 @@ from scipy.stats import ttest_ind, linregress, ks_2samp, mannwhitneyu, t
 import statsmodels.formula.api as smf
 from sklearn.linear_model import LinearRegression
 from matplotlib.ticker import PercentFormatter, MultipleLocator
+
+
+# Auto-detect repository root (2 levels up from this script)
+# Script location: repo_root/src/postprocessing/06_PDO_PDX_plots.py
+import os
+import sys
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+repo_root = os.path.dirname(os.path.dirname(script_dir))
+root = repo_root
+
+# Add postprocessing directory to path for imports
+sys.path.insert(0, script_dir)
+
 from Code.utility_functions import *
 from Code.constants import *
 
@@ -76,10 +89,8 @@ from Code.constants import *
     * Multiple PDOs from the same PT are individual data points
     * Only cohorts with >3 organoids'''
 
-root = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #Assumes scripts are in project root
-
-all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "tables", "all_sample_matches_reshaped.csv"))
-hoge_PDX_table_linoy = pd.read_csv(os.path.join(root, "PDX_data", "hoge_pdx_disc_table_Linoy.csv"))
+all_sample_matches_reshaped = pd.read_csv(os.path.join(root, "results", "tables", "all_sample_matches_reshaped.csv"))
+hoge_PDX_table_linoy = pd.read_csv(os.path.join(root, "results", "PDX_data", "hoge_pdx_disc_table_Linoy.csv"))
 hoge_PDX_table_linoy = hoge_PDX_table_linoy.rename(columns={"cohort_name": "Cohort_Name"})
 
 hoge_PT_PDX_only = hoge_PDX_table_linoy[hoge_PDX_table_linoy["comparison_type"] == "PT-PDX"]
@@ -212,7 +223,7 @@ plot_with_pvalues_and_sample_sizes(df_filtered,'Num_arms_disc',
    over passages in matched + unmatched organoids and PDXs
 Statistical test - linear regression for each model, with an interaction term'''
 
-merged_pdo_pdx = pd.read_csv(os.path.join(root, "tables", "merged_pdx_and_organoid_disc_table.csv"))
+merged_pdo_pdx = pd.read_csv(os.path.join(root, "results", "tables", "merged_pdx_and_organoid_disc_table.csv"))
 merged_pdo_pdx = merged_pdo_pdx[pd.to_numeric(merged_pdo_pdx['Passage'], errors='coerce').notnull()]
 merged_pdo_pdx['Passage_Num'] = merged_pdo_pdx['Passage'].astype(int)
 merged_pdo_pdx['Passage_Cat'] = merged_pdo_pdx['Passage_Num'].astype(str)
@@ -323,7 +334,7 @@ def plot_with_linear_regression(df, value_col, label, show_trendline_ci=True):
 
 plt.close('all')
 genome_results = plot_with_linear_regression(merged_pdo_pdx, 'Percent_Genome_Discordance', 'Average genome discordance', show_trendline_ci=True)
-plt.savefig(os.path.join(root,"plots", "average_genome_disc_over_passages.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "average_genome_disc_over_passages.pdf"), dpi=300)
 plt.show()
 
 print(f"Percent genome discordance\nOne sided Mann-Whitney U test P-value = {genome_results['mann_whitney_u_p']:.10f}")
@@ -342,7 +353,7 @@ for model, data in genome_results['trendlines'].items():
 print("\n" + "="*50 + "\n")
 plt.close('all')
 arms_results = plot_with_linear_regression(merged_pdo_pdx, 'Num_arms_disc', 'Average number of arms discordant', show_trendline_ci=True)
-plt.savefig(os.path.join(root,"plots", "average_arm_disc_over_passages.pdf"), dpi=300)
+plt.savefig(os.path.join(root, "results", "plots", "average_arm_disc_over_passages.pdf"), dpi=300)
 plt.show()
 
 print(f"Number of arms discordant\nOne-sided Mann-Whitney U test P-value = {arms_results['mann_whitney_u_p']:.10f}")
@@ -567,4 +578,3 @@ print(f"  Total models analyzed: {pdx_total_count}")
 print(f"  Models with discordance > {x_value}%: {pdx_count_above_x}")
 print(f"  Cumulative percent of models (y) at x={x_value}%: {pdx_cumulative_percent:.2f}%")
 
-##########################

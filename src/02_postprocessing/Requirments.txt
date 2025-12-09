@@ -1,5 +1,8 @@
 # Python Requirements for Organoid Stability Analysis Pipeline
 # Post-Processing Scripts (CNV Discordance Analysis)
+#
+# Installation: pip install -r requirements.txt
+# Python 3.8+ recommended
 
 # Core data manipulation
 pandas>=1.5.0
