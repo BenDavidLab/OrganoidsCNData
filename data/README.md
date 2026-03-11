@@ -33,3 +33,4 @@ Contains genome reference files used for alignment and CNV calling in the pre-pr
 | 10-Yeung_Lab       | hg38                                  |
 | 11-Heim_Lab        | hg19                                  |
 | 12-Clevers_Lab     | hg19                                  |
+| 13-MSK             | hg19                                  |
